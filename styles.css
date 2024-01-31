@@ -1,0 +1,186 @@
+body, html {
+  background-color: white;
+  transition: background-color 0.5s ease; /* Optional: Add a smooth transition effect */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  perspective: 1000px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.spline-viewer {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
+
+
+/* Existing styles for desktop */
+.discord-button, .instagram-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 35px;
+}
+
+
+
+.discord-button,
+.instagram-button {
+  position: absolute;
+  top: 60px; /* Adjusted to position buttons closer to the top */
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 35px;
+}
+
+.discord-button {
+  left: calc(50% - 75px); /* Adjusted to move the Discord button a little to the left */
+}
+
+.instagram-button {
+  left: calc(50% + 75px); /* Adjusted to position the Instagram button further away from the Discord button */
+}
+
+
+
+.container {
+  position: relative;
+}
+
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 9999;
+}
+
+#popup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#popup input,
+#popup textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#popup button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#popup button:hover {
+  background-color: #45a049;
+}
+
+.discord-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Change the background color with opacity */
+  animation: shake 0.3s;
+  cursor: pointer;
+  /* Apply the shake animation on hover */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(-50%);
+  }
+  25%, 75% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+}
+
+.instagram-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Change the background color with opacity */
+  animation: shake 0.3s;
+  cursor: pointer;
+  /* Apply the shake animation on hover */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(-50%);
+  }
+  25%, 75% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+}
+
+/* Add your custom styles here */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gay-button {
+  position: fixed;
+  /* Change to fixed to keep the button in a fixed position */
+  bottom: 20px;
+  /* Adjust this value to position the button vertically at the bottom */
+  right: 20px;
+  /* Adjust this value to position the button horizontally at the right */
+  background-color: #111111;
+  color: #000;
+  padding: 15px 25px;
+  /* Slightly larger size */
+  border: none;
+  border-radius: 8px;
+  /* More rounded corners */
+  cursor: pointer;
+  z-index: 3;
+  /* Set a higher z-index for the button */
+  transition: all 0.3s ease-in-out;
+  /* Add a smooth transition effect */
+}
