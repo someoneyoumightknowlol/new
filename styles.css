@@ -58,6 +58,13 @@ body, html {
   left: calc(50% + 75px); /* Adjusted to position the Instagram button further away from the Discord button */
 }
 
+/* Media query for smaller screens (phones) */
+@media only screen and (max-width: 768px) {
+  .discord-button,
+  .instagram-button {
+    padding: 20px 40px; /* Increased padding for mobile devices */
+  }
+}
 
 
 .container {
